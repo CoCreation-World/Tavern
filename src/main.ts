@@ -32,5 +32,15 @@ function closePopup(){
         currentPopup = undefined;
     }
 }
+WA.onInit().then(() => {
+    WA.room.onEnter('inside', () => {
+        WA.room.hideLayer('inside')})});
+
+        WA.onInit().then(() => {
+            WA.room.onLeave('inside', () => {
+                WA.room.showLayer('inside')})});
+        
+                    
+
 
 export {};
